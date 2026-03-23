@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shere Punjab Dhol</title>
+
+<link rel="icon" href="logo.png">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:black;
+color:white;
+}
+
+header{
+text-align:center;
+padding:40px;
+}
+
+.logo{
+width:220px;
+}
+
+h1{
+color:gold;
+}
+
+section{
+padding:50px 8%;
+animation:fade 1.5s ease;
+}
+
+@keyframes fade{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1;}
+}
+
+h2{
+text-align:center;
+color:gold;
+margin-bottom:30px;
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#111;
+padding:25px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 0 15px gold;
+}
+
+/* GALLERY */
+
+.gallery{
+max-width:900px;
+margin:auto;
+}
+
+.gallery img{
+width:100%;
+margin-bottom:25px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+/* BUTTONS */
+
+.button{
+display:inline-block;
+margin:10px;
+padding:12px 25px;
+background:gold;
+color:black;
+text-decoration:none;
+border-radius:25px;
+font-weight:bold;
+}
+
+.contact{
+text-align:center;
+}
+
+/* FORM */
+
+input, textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:5px;
+}
+
+button{
+padding:12px 25px;
+background:gold;
+border:none;
+border-radius:20px;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* WHATSAPP FLOAT */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px 20px;
+color:white;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#111;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="logo.png" class="logo">
+
+<h1>Shere Punjab Dhol</h1>
+
+<p style="color:#ccc;">High Energy Punjabi Dhol For Weddings & Events</p>
+
+</header>
+
+<!-- ABOUT -->
+
+<section>
+
+<h2>About Us</h2>
+
+<p>
+
+Shere Punjab Dhol provides high energy Punjabi Dhol performances for weddings, baraat, and special events.  
+We bring powerful beats, energetic vibes, and unforgettable moments to every celebration.
+
+</p>
+
+</section>
+
+<!-- SERVICES -->
+
+<section>
+
+<h2>Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Wedding Dhol</h3>
+<p>High energy dhol for weddings and baraat.</p>
+</div>
+
+<div class="card">
+<h3>Baraat Entry</h3>
+<p>Grand groom entry with powerful beats.</p>
+</div>
+
+<div class="card">
+<h3>Party & Events</h3>
+<p>Dhol performance for parties and celebrations.</p>
+</div>
+
+<div class="card">
+<h3>Festival Events</h3>
+<p>Live dhol for festivals and processions.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section>
+
+<h2>Our Gallery</h2>
+
+<div class="gallery">
+
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+<img src="photo5.jpg">
+<img src="photo6.jpg">
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact">
+
+<h2>Contact Us</h2>
+
+<a class="button" href="tel:9917027716">Call Now</a>
+
+<a class="button" href="https://wa.me/919917027716">WhatsApp</a>
+
+<br>
+
+<a class="button" href="mailto:sharukhsheikh286@gmail.com">Email</a>
+
+<a class="button" href="https://www.instagram.com/shere_punjab_dhol">Instagram</a>
+
+</section>
+
+<!-- BOOKING FORM -->
+
+<section>
+
+<h2>Book Now</h2>
+
+<form onsubmit="sendWhatsApp(); return false;">
+
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="text" id="phone" placeholder="Your Phone" required>
+<textarea id="message" placeholder="Event Details"></textarea>
+
+<button type="submit">Send Booking</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© Shere Punjab Dhol</p>
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/919917027716">WhatsApp</a>
+
+<script>
+
+function sendWhatsApp(){
+
+var name = document.getElementById("name").value;
+var phone = document.getElementById("phone").value;
+var message = document.getElementById("message").value;
+
+var url = "https://wa.me/919917027716?text="
++ "Name: " + name + "%0a"
++ "Phone: " + phone + "%0a"
++ "Details: " + message;
+
+window.open(url, "_blank");
+
+}
+
+</script>
+
+</body>
+</html>
